@@ -1,0 +1,169 @@
+/* Autor: Carlos Licto */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+:root {
+    --background: #0F2F3C;
+    --skin: #f5d9ab;
+    --skin-shadow: #f0b582;
+    --border-finger: 15px solid black;
+    --finger-shadow: inset 10px 10px var(--skin-shadow);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(0deg, steelblue 40%, rgb(41, 77, 107) 60%, black 95%);
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.hand{
+    position: relative;
+    margin-top: 5%;
+    display: block;
+    /* margin-top: 10%; */
+    width: 340px;
+    height: 240px;
+    background-color: var(--skin);
+    border-radius: 20%;
+    border: var(--border-finger);
+    border-top: none;
+}
+.legend {
+    position: absolute;
+    background: black;
+    top: -110px;
+    left: -200px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    font-size: 45px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    letter-spacing: 5px;
+    z-index: 1;
+    transform: rotate(-10deg);
+    transition: opacity 400ms linear;
+    opacity: 0;
+  }
+  .hand:hover .legend{
+    opacity: 1;
+  }
+.thumb{
+    position: absolute;
+    background-color: inherit;
+    border-radius: 40% 40% 0 0;
+    border: var(--border-finger);
+    border-bottom: none;
+    top: 20px;
+    left: -10px;
+    width: 90px;
+    height: 150px;
+    transform-origin: bottom left;
+    transform: rotate(317deg);
+    box-shadow: var(--finger-shadow);
+}
+.joint{    
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    top: 43%;
+    left: 14%;
+    border-top: var(--border-finger);
+    border-radius: 50%;
+    border-left: none;
+}
+.index{
+    position: absolute;
+    background-color: inherit;
+    border-radius: 40% 40% 0 0;
+    border: var(--border-finger);
+    border-bottom: none;
+    top: -180px;
+    left: 10px;
+    width: 75px;
+    height: 200px;
+    box-shadow: var(--finger-shadow);
+}
+.middle{
+    position: absolute;
+    background-color: inherit;
+    border-radius: 40% ;
+    border: var(--border-finger);
+    top: -50px;
+    left: 85px;
+    width: 75px;
+    height: 120px;
+    box-shadow: var(--finger-shadow);
+}
+
+.ring{
+    position: absolute;
+    background-color: inherit;
+    border-radius: 40% ;
+    border: var(--border-finger);
+    top: -50px;
+    left: 160px;
+    width: 75px;
+    height: 120px;
+    box-shadow: var(--finger-shadow);
+}
+.little{
+    position: absolute;
+    background-color: inherit;
+    border-radius: 40% 40% 0 0;
+    border: var(--border-finger);
+    border-bottom: none;
+    top: -140px;
+    left: 235px;
+    width: 75px;
+    height: 160px;
+    box-shadow: var(--finger-shadow);
+}
+.finger-shine{    
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    top: 5%;
+    right: 15%;
+}
+.bracelet{
+    position: relative;
+    display: block;
+    width: 270px;
+    height: 100px;
+    background-color: #525363;
+    border: 15px solid black;
+}
+.ruby{
+    position: absolute;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    border: var(--border-finger);
+    border-radius: 50%;
+    left: 5%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.gem{
+    position: absolute;
+    top: 20%;
+    width: 30px;
+    height: 30px;
+    border: var(--border-finger);
+    border-radius: 50%;
+    left: 35%;
+    /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+}
+
+.ruby-2{
+    left: 55%;
+}
+
+.gem-2{
+    left: 85%
+}
